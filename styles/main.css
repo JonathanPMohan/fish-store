@@ -10,3 +10,9 @@ body {
 .on-sale > .thumbnail {
   border-color: red;
 }
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 75pt;
+  text-shadow: 3px;
+}

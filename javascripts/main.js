@@ -1,5 +1,16 @@
 // Filter fish that are "on sale"
 
+const discount = .12;
+
+const applySale = () => {
+    $(".on-sale").each((i, fish) => {
+        const fullPrice = $(fish).find('.price')
+        const newPrice = (parseInt(fullPrice.html()) * (1 - discount)).toFixed(2);
+        fullPrice.html(newPrice);
+    })
+
+}
+
 // Add fish to "Basket"
 const writeFishes = (arrayOfFishes) => {
     let domString = '';
@@ -16,7 +27,7 @@ const writeFishes = (arrayOfFishes) => {
               </p>
           </div>
           <div class="caption card-footer">
-              <button class="add btn btn-danger">Do You Like Fishsticks??</button>
+              <button class="add btn btn-info">Do You Like Fishsticks??</button>
           </div>
       </div>
   </div>
@@ -47,6 +58,9 @@ const writeFishes = (arrayOfFishes) => {
         // alert('Sale Fish Bish');
         // all divs with the class fish, give me just the ones WITHOUT the class 'on-sale' and HIDE
         $(".fish").not(".on-sale").toggle();
+        $("#show-sale").text((i, text) => {
+            return (text === "Show Sale Fish") ? 'Show All' : 'Show Sale Fish'
+        });  
     });
   
   // Load Fish
@@ -54,6 +68,7 @@ const writeFishes = (arrayOfFishes) => {
     .done((data) => {
       console.log(data);
       writeFishes(data.fishes);
+      applySale();
     })
     .fail((error) => {
       console.error(error);

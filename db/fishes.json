@@ -35,6 +35,12 @@
           "basePrice": 14,
           "imageSoure": "http://www.tropicalfishsite.com/wp-content/uploads/2014/02/hemorrhagic-septicemia-300x300.png",
           "onSale": true
-      }
+      },
+      {
+        "name": "Trudy The Goldfish",
+        "basePrice": 14,
+        "imageSoure": "http://www.tropicalfishsite.com/wp-content/uploads/2014/02/hemorrhagic-septicemia-300x300.png",
+        "onSale": true
+    }
   ]
 }
