@@ -16,7 +16,7 @@ const writeFishes = (arrayOfFishes) => {
     let domString = '';
     arrayOfFishes.forEach((fish) => {
       domString += `
-      <div class="${fish.onSale ? 'on-sale' : ''} fish card col-md-6 col-md-offset-3">
+      <div class="${fish.onSale ? 'on-sale' : ''} fish card col-md-7 col-md-offset-4">
       <div class="thumbnail">
           <img src="${fish.imageSoure}"
               alt="" width="40%">

@@ -22,3 +22,12 @@ h1 {
   margin: 3%;
   padding: 5%;
 }
+
+.row {
+  padding: 2%;
+}
+
+#available {
+  padding-bottom: 5%;
+  margin-bottom: 3%;
+}
