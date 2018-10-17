@@ -15,4 +15,10 @@ h1 {
   font-family: 'Amatic SC', cursive;
   font-size: 75pt;
   text-shadow: 3px;
+  padding: 2px;
+}
+
+#fishStore {
+  margin: 3%;
+  padding: 5%;
 }
