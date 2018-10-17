@@ -1,7 +1,18 @@
 body {
+  background-color: aquamarine;
+  background-image: url("/images/background.png");
+  background-attachment: fixed;
+  color: darkcyan;
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .on-sale > .thumbnail {
   border-color: red;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 75pt;
+  text-shadow: 3px;
 }
