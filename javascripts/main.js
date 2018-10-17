@@ -16,7 +16,7 @@ const writeFishes = (arrayOfFishes) => {
                         </p>
                     </div>
                     <div class="caption card-footer">
-                        <button class="add btn btn-danger">Add To Basket</button>
+                        <button class="add btn btn-danger">Do You Like Fishsticks?</button>
                     </div>
                 </div>
             </div>
@@ -25,9 +25,24 @@ const writeFishes = (arrayOfFishes) => {
     })
     // Write to the available div
     $("#available").append(domString);
-    // $(domString).appendTo("#available");
-}
+   bindEvents();
+    }
 
+const bindEvents = () => {
+    $(".add").on('click', (e) => {
+     // what is the div that has the fish
+     const fishToMove = $(e.target).closest('.fish');
+     // move it to the 'snagged' div
+     $("#snagged").append(fishToMove);
+     // button text => Remove from Basket | change class - 'add' + 'remove'
+     $(e.target).text('These Fish Are Dead :(').addClass('remove').removeClass('add');
+    });
+};
+
+// Dynamically listen for events that happen on buttons with a class
+// $('body').on('click', 'button.add', () => {
+
+// })
 
 // Load Fish 
 $.get('../db/fishes.json')
@@ -37,4 +52,8 @@ $.get('../db/fishes.json')
     })
     .fail((error) => {
         console.error(error);
+    });
+
+    $(".add").on('click', (e) => {
+        alert('Do You Like Fish Sticks?')
     });
